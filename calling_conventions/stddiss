@@ -1,0 +1,197 @@
+<sum_prod>:
+push   %ebp
+mov    %esp,%ebp
+sub    $0x8,%esp
+call   140f <__x86.get_pc_thunk.ax>
+add    $0x2e1c,%eax
+mov    %ecx,-0x4(%ebp)
+mov    %edx,-0x8(%ebp)
+mov    -0x4(%ebp),%eax
+imul   -0x8(%ebp),%eax
+mov    %eax,%edx
+mov    0x8(%ebp),%eax
+add    %edx,%eax
+add    $0x5,%eax
+leave
+ret    $0x4
+
+<main>:
+lea    0x4(%esp),%ecx
+and    $0xfffffff0,%esp
+push   -0x4(%ecx)
+push   %ebp
+mov    %esp,%ebp
+push   %edi
+push   %esi
+push   %ebx
+push   %ecx
+sub    $0x58,%esp
+call   10d0 <__x86.get_pc_thunk.bx>
+add    $0x2de3,%ebx
+mov    %gs:0x14,%eax
+mov    %eax,-0x1c(%ebp)
+xor    %eax,%eax
+sub    $0xc,%esp
+push   $0xab0ba
+call   1070 <srand@plt>
+add    $0x10,%esp
+sub    $0x8,%esp
+push   $0x4
+push   $0x14
+call   1090 <calloc@plt>
+add    $0x10,%esp
+mov    %eax,-0x48(%ebp)
+movl   $0x0,-0x4c(%ebp)
+jmp    1268 <main+0x70>
+mov    -0x4c(%ebp),%eax
+lea    0x0(,%eax,4),%edx
+mov    -0x48(%ebp),%eax
+lea    (%edx,%eax,1),%esi
+call   1080 <rand@plt>
+mov    %eax,(%esi)
+addl   $0x1,-0x4c(%ebp)
+cmpl   $0x13,-0x4c(%ebp)
+jle    124d <main+0x55>
+sub    $0x8,%esp
+lea    -0x2c(%ebp),%eax
+push   %eax
+push   $0x2
+call   1060 <clock_gettime@plt>
+add    $0x10,%esp
+movl   $0x0,-0x50(%ebp)
+jmp    135b <main+0x163>
+mov    -0x50(%ebp),%edx
+mov    %edx,%eax
+shl    $0x3,%eax
+sub    %edx,%eax
+lea    0x2(%eax),%ecx
+mov    $0x66666667,%edx
+mov    %ecx,%eax
+imul   %edx
+sar    $0x3,%edx
+mov    %ecx,%eax
+sar    $0x1f,%eax
+sub    %eax,%edx
+mov    %edx,%eax
+shl    $0x2,%eax
+add    %edx,%eax
+shl    $0x2,%eax
+sub    %eax,%ecx
+mov    %ecx,%edx
+mov    %edx,%eax
+lea    0x0(,%eax,4),%edx
+mov    -0x48(%ebp),%eax
+add    %edx,%eax
+mov    (%eax),%edi
+mov    -0x50(%ebp),%edx
+mov    %edx,%eax
+shl    $0x3,%eax
+sub    %edx,%eax
+lea    0x1(%eax),%ecx
+mov    $0x66666667,%edx
+mov    %ecx,%eax
+imul   %edx
+sar    $0x3,%edx
+mov    %ecx,%eax
+sar    $0x1f,%eax
+sub    %eax,%edx
+mov    %edx,%eax
+shl    $0x2,%eax
+add    %edx,%eax
+shl    $0x2,%eax
+sub    %eax,%ecx
+mov    %ecx,%edx
+mov    %edx,%eax
+lea    0x0(,%eax,4),%edx
+mov    -0x48(%ebp),%eax
+add    %edx,%eax
+mov    (%eax),%esi
+mov    -0x50(%ebp),%edx
+mov    %edx,%eax
+shl    $0x3,%eax
+sub    %edx,%eax
+mov    %eax,%ecx
+mov    $0x66666667,%edx
+mov    %ecx,%eax
+imul   %edx
+sar    $0x3,%edx
+mov    %ecx,%eax
+sar    $0x1f,%eax
+sub    %eax,%edx
+mov    %edx,%eax
+shl    $0x2,%eax
+add    %edx,%eax
+shl    $0x2,%eax
+sub    %eax,%ecx
+mov    %ecx,%edx
+mov    %edx,%eax
+lea    0x0(,%eax,4),%edx
+mov    -0x48(%ebp),%eax
+add    %edx,%eax
+mov    (%eax),%eax
+sub    $0xc,%esp
+push   %edi
+mov    %esi,%edx
+mov    %eax,%ecx
+call   11cd <sum_prod>
+add    $0xc,%esp
+mov    %eax,-0x44(%ebp)
+addl   $0x1,-0x50(%ebp)
+cmpl   $0x3b9ac9ff,-0x50(%ebp)
+jle    128b <main+0x93>
+sub    $0x8,%esp
+lea    -0x24(%ebp),%eax
+push   %eax
+push   $0x2
+call   1060 <clock_gettime@plt>
+add    $0x10,%esp
+mov    -0x24(%ebp),%edx
+mov    -0x2c(%ebp),%eax
+sub    %eax,%edx
+mov    %edx,-0x34(%ebp)
+mov    -0x20(%ebp),%edx
+mov    -0x28(%ebp),%eax
+sub    %eax,%edx
+mov    %edx,-0x30(%ebp)
+mov    -0x30(%ebp),%eax
+test   %eax,%eax
+jns    13aa <main+0x1b2>
+mov    -0x34(%ebp),%eax
+sub    $0x1,%eax
+mov    %eax,-0x34(%ebp)
+mov    -0x30(%ebp),%eax
+add    $0x3b9aca00,%eax
+mov    %eax,-0x30(%ebp)
+mov    -0x34(%ebp),%eax
+mov    %eax,-0x5c(%ebp)
+fildl  -0x5c(%ebp)
+mov    -0x30(%ebp),%eax
+mov    %eax,-0x5c(%ebp)
+fildl  -0x5c(%ebp)
+fldl   -0x1fdc(%ebx)
+fdivrp %st,%st(1)
+faddp  %st,%st(1)
+fstpl  -0x40(%ebp)
+fldl   -0x40(%ebp)
+fldl   -0x1fdc(%ebx)
+fdivrp %st,%st(1)
+sub    $0x4,%esp
+lea    -0x8(%esp),%esp
+fstpl  (%esp)
+lea    -0x1fec(%ebx),%eax
+push   %eax
+call   1050 <printf@plt>
+add    $0x10,%esp
+mov    $0x0,%eax
+mov    -0x1c(%ebp),%edx
+sub    %gs:0x14,%edx
+je     1403 <main+0x20b>
+call   1420 <__stack_chk_fail_local>
+lea    -0x10(%ebp),%esp
+pop    %ecx
+pop    %ebx
+pop    %esi
+pop    %edi
+pop    %ebp
+lea    -0x4(%ecx),%esp
+ret

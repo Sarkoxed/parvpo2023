@@ -1,0 +1,60 @@
+sarkoxedaf@orgasmotron ~/Working/university/2023/parvpo/vectorize
+$$ % clang -O3 main.c 2>/dev/null && ./a.out                                                                                                     !10669
+Elapsed: 3.03359
+
+
+sarkoxedaf@orgasmotron ~/Working/university/2023/parvpo/vectorize
+$$ % nvim main.c                                                                                                                                 !10670
+
+sarkoxedaf@orgasmotron ~/Working/university/2023/parvpo/vectorize
+$$ % clang -O3 main.c 2>/dev/null && ./a.out                                                                                                     !10671
+Elapsed: 2.22514
+
+
+sarkoxedaf@orgasmotron ~/Working/university/2023/parvpo/vectorize
+$$ % nvim main.c                                                                                                                                 !10672
+
+sarkoxedaf@orgasmotron ~/Working/university/2023/parvpo/vectorize
+$$ % clang -O3 main.c 2>/dev/null && ./a.out                                                                                                     !10673
+Elapsed: 3.05881
+
+
+sarkoxedaf@orgasmotron ~/Working/university/2023/parvpo/vectorize
+$$ % nvim main.c                                                                                                                                 !10674
+
+sarkoxedaf@orgasmotron ~/Working/university/2023/parvpo/vectorize
+$$ % clang -O3 main.c 2>/dev/null && ./a.out                                                                                                     !10675
+Elapsed: 3.0568
+
+
+sarkoxedaf@orgasmotron ~/Working/university/2023/parvpo/vectorize
+$$ % nvim main.c                                                                                                                                 !10676
+
+sarkoxedaf@orgasmotron ~/Working/university/2023/parvpo/vectorize
+$$ % clang -O3 main.c 2>/dev/null && ./a.out                                                                                                     !10677
+Elapsed: 2.2087
+
+
+sarkoxedaf@orgasmotron ~/Working/university/2023/parvpo/vectorize
+$$ % nvim main.c                                                                                                                                 !10678
+
+sarkoxedaf@orgasmotron ~/Working/university/2023/parvpo/vectorize
+$$ % clang -O3 main.c 2>/dev/null && ./a.out                                                                                                     !10679
+Elapsed: 2.2802
+
+
+sarkoxedaf@orgasmotron ~/Working/university/2023/parvpo/vectorize
+$$ % nvim main.c                                                                                                                                 !10680
+
+sarkoxedaf@orgasmotron ~/Working/university/2023/parvpo/vectorize
+$$ % clang -O3 main.c 2>/dev/null && ./a.out                                                                                                     !10681
+Elapsed: 3.05687
+
+
+sarkoxedaf@orgasmotron ~/Working/university/2023/parvpo/vectorize
+$$ % nvim main.c                                                                                                                                 !10682
+
+sarkoxedaf@orgasmotron ~/Working/university/2023/parvpo/vectorize
+$$ % clang -O3 main.c 2>/dev/null && ./a.out                                                                                                     !10683
+Elapsed: 2.21077
+

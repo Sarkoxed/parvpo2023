@@ -1,0 +1,18 @@
+./fastcall.out
+Elapsed: 8.53251e-09
+
+./fastcalllO3.out
+Elapsed: 1.653e-15
+
+./stdcall.out
+Elapsed: 8.97562e-09
+
+./stdcalllO3.out
+Elapsed: 1.763e-15
+
+./cdecl.out
+Elapsed: 8.54874e-09
+
+./cdeclO3.out
+Elapsed: 1.332e-15
+

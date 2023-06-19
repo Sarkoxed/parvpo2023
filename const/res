@@ -1,0 +1,44 @@
+fastcall
+
+const
+Elapsed: 9.08003e-09
+const O2
+Elapsed: 1.052e-15
+
+not const
+Elapsed: 9.00868e-09
+
+not const O2
+Elapsed: 9.81e-16
+------------------------------------------------------------
+
+stdcall
+
+const
+Elapsed: 8.86344e-09
+
+const O2
+Elapsed: 2.044e-15
+
+not const
+Elapsed: 8.74703e-09
+
+not const O2
+Elapsed: 1.503e-15
+------------------------------------------------------------
+
+cdecl
+
+const
+Elapsed: 8.67436e-09
+
+const O2
+Elapsed: 1.753e-15
+
+not const
+Elapsed: 8.7854e-09
+
+not const O2
+Elapsed: 2.064e-15
+------------------------------------------------------------
+

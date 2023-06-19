@@ -1,0 +1,94 @@
+cdecldiss --- 1/7 --- Text
+ 1 <sum_prod>:                                                               1 <sum_prod>:
+ 2 push   %ebp                                                               2 push   %ebp
+ 3 mov    %esp,%ebp                                                          3 mov    %esp,%ebp
+ 4 sub    $0x8,%esp                                                          . 
+ 5 call   140f <__x86.get_pc_thunk.ax>                                       4 call   1402 <__x86.get_pc_thunk.ax>
+ 6 add    $0x2e1c,%eax                                                       5 add    $0x2e1f,%eax
+ 7 mov    %ecx,-0x4(%ebp)                                                    6 mov    0x8(%ebp),%eax
+ 8 mov    %edx,-0x8(%ebp)                                                    . 
+ 9 mov    -0x4(%ebp),%eax                                                    . 
+10 imul   -0x8(%ebp),%eax                                                    7 imul   0xc(%ebp),%eax
+11 mov    %eax,%edx                                                          8 mov    %eax,%edx
+12 mov    0x8(%ebp),%eax                                                     9 mov    0x10(%ebp),%eax
+13 add    %edx,%eax                                                         10 add    %edx,%eax
+14 add    $0x5,%eax                                                         11 add    $0x5,%eax
+15 leave                                                                    .. 
+16 ret    $0x4                                                              12 pop    %ebp
+..                                                                          13 ret
+17                                                                          14 
+18 <main>:                                                                  15 <main>:
+19 lea    0x4(%esp),%ecx                                                    16 lea    0x4(%esp),%ecx
+
+cdecldiss --- 2/7 --- Text
+27 push   %ecx                                                              24 push   %ecx
+28 sub    $0x58,%esp                                                        25 sub    $0x58,%esp
+29 call   10d0 <__x86.get_pc_thunk.bx>                                      26 call   10d0 <__x86.get_pc_thunk.bx>
+30 add    $0x2de3,%ebx                                                      27 add    $0x2dee,%ebx
+31 mov    %gs:0x14,%eax                                                     28 mov    %gs:0x14,%eax
+32 mov    %eax,-0x1c(%ebp)                                                  29 mov    %eax,-0x1c(%ebp)
+33 xor    %eax,%eax                                                         30 xor    %eax,%eax
+
+cdecldiss --- 3/7 --- Text
+42 add    $0x10,%esp                                                        39 add    $0x10,%esp
+43 mov    %eax,-0x48(%ebp)                                                  40 mov    %eax,-0x48(%ebp)
+44 movl   $0x0,-0x4c(%ebp)                                                  41 movl   $0x0,-0x4c(%ebp)
+45 jmp    1268 <main+0x70>                                                  42 jmp    125d <main+0x70>
+46 mov    -0x4c(%ebp),%eax                                                  43 mov    -0x4c(%ebp),%eax
+47 lea    0x0(,%eax,4),%edx                                                 44 lea    0x0(,%eax,4),%edx
+48 mov    -0x48(%ebp),%eax                                                  45 mov    -0x48(%ebp),%eax
+
+cdecldiss --- 4/7 --- Text
+51 mov    %eax,(%esi)                                                       48 mov    %eax,(%esi)
+52 addl   $0x1,-0x4c(%ebp)                                                  49 addl   $0x1,-0x4c(%ebp)
+53 cmpl   $0x13,-0x4c(%ebp)                                                 50 cmpl   $0x13,-0x4c(%ebp)
+54 jle    124d <main+0x55>                                                  51 jle    1242 <main+0x55>
+55 sub    $0x8,%esp                                                         52 sub    $0x8,%esp
+56 lea    -0x2c(%ebp),%eax                                                  53 lea    -0x2c(%ebp),%eax
+57 push   %eax                                                              54 push   %eax
+58 push   $0x2                                                              55 push   $0x2
+59 call   1060 <clock_gettime@plt>                                          56 call   1060 <clock_gettime@plt>
+60 add    $0x10,%esp                                                        57 add    $0x10,%esp
+61 movl   $0x0,-0x50(%ebp)                                                  58 movl   $0x0,-0x50(%ebp)
+62 jmp    135b <main+0x163>                                                 59 jmp    134e <main+0x161>
+63 mov    -0x50(%ebp),%edx                                                  60 mov    -0x50(%ebp),%edx
+64 mov    %edx,%eax                                                         61 mov    %edx,%eax
+65 shl    $0x3,%eax                                                         62 shl    $0x3,%eax
+
+cdecldiss --- 5/7 --- Text
+129 mov    -0x48(%ebp),%eax                                                 126 mov    -0x48(%ebp),%eax
+130 add    %edx,%eax                                                        127 add    %edx,%eax
+131 mov    (%eax),%eax                                                      128 mov    (%eax),%eax
+132 sub    $0xc,%esp                                                        129 sub    $0x4,%esp
+133 push   %edi                                                             130 push   %edi
+134 mov    %esi,%edx                                                        131 push   %esi
+135 mov    %eax,%ecx                                                        132 push   %eax
+136 call   11cd <sum_prod>                                                  133 call   11cd <sum_prod>
+137 add    $0xc,%esp                                                        134 add    $0x10,%esp
+138 mov    %eax,-0x44(%ebp)                                                 135 mov    %eax,-0x44(%ebp)
+139 addl   $0x1,-0x50(%ebp)                                                 136 addl   $0x1,-0x50(%ebp)
+140 cmpl   $0x3b9ac9ff,-0x50(%ebp)                                          137 cmpl   $0x3b9ac9ff,-0x50(%ebp)
+141 jle    128b <main+0x93>                                                 138 jle    1280 <main+0x93>
+142 sub    $0x8,%esp                                                        139 sub    $0x8,%esp
+143 lea    -0x24(%ebp),%eax                                                 140 lea    -0x24(%ebp),%eax
+144 push   %eax                                                             141 push   %eax
+
+cdecldiss --- 6/7 --- Text
+155 mov    %edx,-0x30(%ebp)                                                 152 mov    %edx,-0x30(%ebp)
+156 mov    -0x30(%ebp),%eax                                                 153 mov    -0x30(%ebp),%eax
+157 test   %eax,%eax                                                        154 test   %eax,%eax
+158 jns    13aa <main+0x1b2>                                                155 jns    139d <main+0x1b0>
+159 mov    -0x34(%ebp),%eax                                                 156 mov    -0x34(%ebp),%eax
+160 sub    $0x1,%eax                                                        157 sub    $0x1,%eax
+161 mov    %eax,-0x34(%ebp)                                                 158 mov    %eax,-0x34(%ebp)
+
+cdecldiss --- 7/7 --- Text
+185 mov    $0x0,%eax                                                        182 mov    $0x0,%eax
+186 mov    -0x1c(%ebp),%edx                                                 183 mov    -0x1c(%ebp),%edx
+187 sub    %gs:0x14,%edx                                                    184 sub    %gs:0x14,%edx
+188 je     1403 <main+0x20b>                                                185 je     13f6 <main+0x209>
+189 call   1420 <__stack_chk_fail_local>                                    186 call   1410 <__stack_chk_fail_local>
+190 lea    -0x10(%ebp),%esp                                                 187 lea    -0x10(%ebp),%esp
+191 pop    %ecx                                                             188 pop    %ecx
+192 pop    %ebx                                                             189 pop    %ebx
+
